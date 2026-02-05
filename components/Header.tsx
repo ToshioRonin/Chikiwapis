@@ -25,36 +25,52 @@ export default function Header() {
             <ThemeToggle />
           </div>
 
-          {/* DERECHA: Búsqueda, Ticket, Eventos, All Cards, Reportes, Iniciar Sesión */}
+          {/* DERECHA: Búsqueda, Ticket, Eventos, Ranking, Reportes, Iniciar Sesión */}
           <div className="flex items-center gap-8">
             <div className="flex items-center min-w-[200px]">
               <SearchInput />
             </div>
 
             <nav className="flex items-center gap-6">
-              {/* 1. All Cards */}
+              {/* 1. Ranking */}
               <Link
-                href="/cards"
+                href="/ranking"
                 className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors uppercase tracking-widest whitespace-nowrap"
               >
-                All Cards
+                Ranking
               </Link>
 
-              {/* 2. Eventos*/}
+              {/* 2. Ranking */}
+              <Link
+                href="/shop"
+                className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors uppercase tracking-widest whitespace-nowrap"
+              >
+                Tienda
+              </Link>
+
+              {/* 3. Ranking */}
+              <Link
+                href="/staff"
+                className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors uppercase tracking-widest whitespace-nowrap"
+              >
+                Staff
+              </Link>
+
+              {/* 4. Eventos*/}
               <Link
                 href="/events"
                 className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors uppercase tracking-widest whitespace-nowrap"
               >
                 Eventos
               </Link>
-              {/* 3. Misiones */}
+              {/* 5. Misiones */}
               <Link
                 href="/misions"
                 className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors uppercase tracking-widest whitespace-nowrap"
               >
                 misiones
               </Link>
-              {/* 4. Ticket (Abre Modal) */}
+              {/* 6. Ticket (Abre Modal) */}
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors uppercase tracking-widest whitespace-nowrap cursor-pointer"
@@ -62,7 +78,7 @@ export default function Header() {
                 Ticket
               </button>
 
-              {/* 5. Reportes */}
+              {/* 7. Reportes */}
               <Link
                 href="/reports"
                 className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors uppercase tracking-widest whitespace-nowrap"
@@ -71,7 +87,7 @@ export default function Header() {
               </Link>
             </nav>
 
-            {/* 6. Iniciar Sesión */}
+            {/* 8. Iniciar Sesión */}
             <Link
               href="/login"
               className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-all active:scale-95 whitespace-nowrap shadow-md shadow-blue-600/10"
